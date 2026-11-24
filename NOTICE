@@ -1,0 +1,17 @@
+NOTICE — KERN-Lab-0.5-624M
+
+Project KERN adapted Qwen/Qwen3-0.6B-Base, distributed by the Qwen team under the Apache License, Version 2.0.
+
+Upstream model: https://huggingface.co/Qwen/Qwen3-0.6B-Base
+Pinned revision: da87bfb608c14b7cf20ba1ce41287e8de496c0cd
+Upstream SafeTensors SHA-256: cd2a512003e2f9f3cd3c32a9c3573f820bb28c940f73c57b1ddaa983d9223eba
+Upstream citation: Qwen Team, Qwen3 Technical Report, https://arxiv.org/abs/2505.09388
+
+Modifications by Project KERN: zero-based layer 14 replaces the dense SwiGLU FFN with one shared expert and three routed experts, using top-2 routing, a shared weight of 0.5 and an FP32 router. The upstream tokenizer and the remaining Transformer layers are retained. The release adds a custom loader, AutoClass entries, example clients and documentation.
+
+Attribution for documentation and code used in the adaptation training split:
+- FastAPI contributors, https://github.com/fastapi/fastapi (MIT, revision a1b3be01aadc)
+- Hugging Face Transformers contributors, https://github.com/huggingface/transformers (Apache-2.0, revision c44d29d8e7e8)
+- Flask contributors, https://github.com/pallets/flask (BSD-3-Clause, revision 49943b5a9441)
+- Requests contributors, https://github.com/psf/requests (Apache-2.0, revision 3c7baaa05ab4)
+- SymPy contributors, https://github.com/sympy/sympy (BSD-3-Clause, revision 91dae8140170)

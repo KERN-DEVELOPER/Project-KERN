@@ -1,0 +1,56 @@
+{
+  "architectures": [
+    "KernQwen3ForCausalLM"
+  ],
+  "auto_map": {
+    "AutoConfig": "modeling_kern_qwen06b_v1.KernQwen3Config",
+    "AutoModelForCausalLM": "modeling_kern_qwen06b_v1.KernQwen3ForCausalLM"
+  },
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "kern_qwen3_moe",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_type": "default",
+    "rope_theta": 1000000
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.51.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936,
+  "kern_adaptation": {
+    "schema_version": "kern.v1_qwen06b_moe.v1",
+    "topology": "upcycle_moe",
+    "target_layer_idx": 14,
+    "base_model_id": "Qwen/Qwen3-0.6B-Base",
+    "base_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+    "base_weights_sha256": "cd2a512003e2f9f3cd3c32a9c3573f820bb28c940f73c57b1ddaa983d9223eba",
+    "source_checkpoint_id": "MS03-MOE-SYMBREAK-L14-FP32MASTER_s42",
+    "upcycle_config": {
+      "target_layer_idx": 14,
+      "num_shared_experts": 1,
+      "num_routed_experts": 3,
+      "top_k": 2,
+      "shared_alpha": 0.5,
+      "renormalize_topk": true,
+      "unnormalized_scale": 1.0
+    },
+    "router_dtype": "float32",
+    "expert_dtype": "bfloat16"
+  }
+}
