@@ -43,7 +43,10 @@ def build_interface(model_dir: Path, device: str):
         ],
         outputs=gr.Textbox(label="Continuation", lines=6),
         title="KERN-Lab-0.5-624M",
-        description="Experimental base model for text continuation. Runs locally.",
+        description=(
+            "Experimental base model for text continuation. Runs locally. "
+            "[Official model card](https://huggingface.co/Project-KERN/KERN-Lab-0.5-624M)."
+        ),
         api_name="generate",
         analytics_enabled=False,
     )

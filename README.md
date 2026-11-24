@@ -2,7 +2,7 @@
 
 **Practical language-model architecture research on consumer hardware.** The first public release, **KERN-Lab-0.5-624M**, asks a focused question: can a small pretrained Qwen model retain its text modeling quality when one dense feed-forward block is replaced by a sparse mixture of experts?
 
-[Model and weights on Hugging Face](https://huggingface.co/VAL2409/KERN-Lab-0.5-624M) · [Architecture notes](ARCHITECTURE.md) · [Changelog](CHANGELOG.md)
+[Model and weights on Hugging Face](https://huggingface.co/Project-KERN/KERN-Lab-0.5-624M) · [Architecture notes](ARCHITECTURE.md) · [Changelog](CHANGELOG.md)
 
 ## First public release
 
@@ -40,7 +40,7 @@ The result on B is a development observation. An independent final test would be
 
 ~~~bash
 python -m pip install "huggingface_hub>=1.0"
-hf download VAL2409/KERN-Lab-0.5-624M --local-dir ./model
+hf download Project-KERN/KERN-Lab-0.5-624M --local-dir ./model
 python -m pip install -r model/requirements.txt
 python model/generate.py --model-dir ./model --prompt "The capital of France is" --max-new-tokens 16 --device cpu --dtype float32
 ~~~
